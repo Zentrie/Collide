@@ -1,10 +1,20 @@
 #!/usr/bin/env perl
 use Mojolicious::Lite -signatures;
 use Redis::Fast;
-get '/' => sub ($c) {
+get '/sequence' => sub {
+  my $c = shift;
   $c->render(template => 'make');
 };
 
+ 
+
+any '/image/bg/:name' => sub {
+  my $c = shift;
+  my $bytes = 0;
+  $c->render(data=> $bytes, format=>'png');
+
+};
+ 
 app->start;
 __DATA__
 
