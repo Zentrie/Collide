@@ -1,8 +1,14 @@
 #!/usr/bin/env perl
 use Mojolicious::Lite -signatures;
 use Redis::Fast;
+<<<<<<< HEAD
 get '/sequence' => sub {
   my $c = shift;
+=======
+app->renderer->cache->max_keys(0);
+
+get '/' => sub ($c) {
+>>>>>>> 0875f9b265e1576cfe980ea62ca31c177f7c7441
   $c->render(template => 'make');
 };
 
