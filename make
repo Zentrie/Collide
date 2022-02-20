@@ -1,6 +1,8 @@
 #!/usr/bin/env perl
 use Mojolicious::Lite -signatures;
 use Redis::Fast;
+app->renderer->cache->max_keys(0);
+
 get '/' => sub ($c) {
   $c->render(template => 'make');
 };
