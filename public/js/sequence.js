@@ -24,8 +24,6 @@ document.addEventListener('DOMContentLoaded',
 
 
 
-        next();
-
     });
 
 
@@ -35,8 +33,8 @@ function next() {
 
     $("#textframe").html('<div id ="words">'.concat(speech[idx]).concat("</div>"));
 
-    $("#backgroundImage").html('<img href="https://cdn.discordapp.com/attachments/862762318407139328/944977862111416350/Untitled_Artwork.png" alt="bkgd">');
-    $("#iconframe").html('<img href="'.concat(icon[idx]).concat('"alt="icon">'));
+    $("#backgroundImage").html('<img src="https://cdn.discordapp.com/attachments/862762318407139328/944977862111416350/Untitled_Artwork.png" alt="bkgd">');
+    $("#iconframe").html('<img src="'.concat(icon[idx]).concat('"alt="icon">'));
     idx = idx + 1;
 
 
